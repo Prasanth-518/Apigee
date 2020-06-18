@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('GenTgz'){
             steps{
-                bat 'tar -cvzf Compressed.tgz "%cd%"'      
+                bat 'tar --exclude .git -cvzf Compressed.tgz "%cd%"'      
             }
         }
     }
