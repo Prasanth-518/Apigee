@@ -1,8 +1,11 @@
 pipeline{
     agent any
+    stages{
     stage('GenTgz'){
         steps{
-            bat "tar -cf Compressed.tar.tgz FLdr1 Fldr2 Hello.json.txt Helo.yml.txt"      
+            bat "tar -cvzf Compressed.tgz cd"      
         }
     }
+    }
+}
 }
